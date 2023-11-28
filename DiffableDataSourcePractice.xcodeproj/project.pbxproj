@@ -17,6 +17,8 @@
 		3450FE282B14C32A00021267 /* DiffableDataSourcePracticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE272B14C32A00021267 /* DiffableDataSourcePracticeTests.swift */; };
 		3450FE322B14C32A00021267 /* DiffableDataSourcePracticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE312B14C32A00021267 /* DiffableDataSourcePracticeUITests.swift */; };
 		3450FE342B14C32A00021267 /* DiffableDataSourcePracticeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE332B14C32A00021267 /* DiffableDataSourcePracticeUITestsLaunchTests.swift */; };
+		3450FE422B15C33F00021267 /* DiffablePracticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE412B15C33F00021267 /* DiffablePracticeController.swift */; };
+		3450FE452B15EF6A00021267 /* CompositionalLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE442B15EF6A00021267 /* CompositionalLayoutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		3450FE2D2B14C32A00021267 /* DiffableDataSourcePracticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiffableDataSourcePracticeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3450FE312B14C32A00021267 /* DiffableDataSourcePracticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourcePracticeUITests.swift; sourceTree = "<group>"; };
 		3450FE332B14C32A00021267 /* DiffableDataSourcePracticeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffableDataSourcePracticeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3450FE412B15C33F00021267 /* DiffablePracticeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiffablePracticeController.swift; sourceTree = SOURCE_ROOT; };
+		3450FE442B15EF6A00021267 /* CompositionalLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		3450FE0C2B14C32900021267 /* DiffableDataSourcePractice */ = {
 			isa = PBXGroup;
 			children = (
+				3450FE432B15EF5800021267 /* CompositionalLayoutPractice */,
+				3450FE402B15C33000021267 /* PracticeContent */,
 				3450FE0D2B14C32900021267 /* AppDelegate.swift */,
 				3450FE0F2B14C32900021267 /* SceneDelegate.swift */,
 				3450FE112B14C32900021267 /* ViewController.swift */,
@@ -128,6 +134,22 @@
 				3450FE332B14C32A00021267 /* DiffableDataSourcePracticeUITestsLaunchTests.swift */,
 			);
 			path = DiffableDataSourcePracticeUITests;
+			sourceTree = "<group>";
+		};
+		3450FE402B15C33000021267 /* PracticeContent */ = {
+			isa = PBXGroup;
+			children = (
+				3450FE412B15C33F00021267 /* DiffablePracticeController.swift */,
+			);
+			path = PracticeContent;
+			sourceTree = "<group>";
+		};
+		3450FE432B15EF5800021267 /* CompositionalLayoutPractice */ = {
+			isa = PBXGroup;
+			children = (
+				3450FE442B15EF6A00021267 /* CompositionalLayoutViewController.swift */,
+			);
+			path = CompositionalLayoutPractice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3450FE452B15EF6A00021267 /* CompositionalLayoutViewController.swift in Sources */,
+				3450FE422B15C33F00021267 /* DiffablePracticeController.swift in Sources */,
 				3450FE122B14C32900021267 /* ViewController.swift in Sources */,
 				3450FE0E2B14C32900021267 /* AppDelegate.swift in Sources */,
 				3450FE182B14C32900021267 /* DiffableDataSourcePractice.xcdatamodeld in Sources */,
@@ -372,7 +396,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -429,7 +453,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -504,7 +528,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YUHU5Z5492;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sheikhamais.DiffableDataSourcePracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -524,7 +548,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = YUHU5Z5492;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sheikhamais.DiffableDataSourcePracticeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
