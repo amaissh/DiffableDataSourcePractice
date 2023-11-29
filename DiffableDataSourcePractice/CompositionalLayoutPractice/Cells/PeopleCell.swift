@@ -13,8 +13,14 @@ class PeopleCell: BaseCollectionCell {
         let obj = UIStackView()
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.axis = .vertical
-        obj.spacing = 8
+        obj.spacing = 0
         obj.backgroundColor = .systemGreen
+        return obj
+    }()
+    
+    private var imageContainerView: UIView = {
+        let obj = UIView()
+        obj.translatesAutoresizingMaskIntoConstraints = false
         return obj
     }()
     
@@ -31,7 +37,7 @@ class PeopleCell: BaseCollectionCell {
         obj.backgroundColor = .brown
         obj.textAlignment = .center
         obj.textColor = .systemBackground
-        obj.font = UIFont.boldSystemFont(ofSize: 16)
+        obj.font = UIFont.systemFont(ofSize: 12)
         obj.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
         return obj
     }()
@@ -48,14 +54,26 @@ class PeopleCell: BaseCollectionCell {
     private func configure() {
         
         contentView.addSubview(itemsStackView)
-        itemsStackView.addArrangedSubview(imageView)
+        itemsStackView.addArrangedSubview(imageContainerView)
         itemsStackView.addArrangedSubview(nameLabel)
+        
+        imageContainerView.addSubview(imageView)
         
         NSLayoutConstraint.activate([
             itemsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             itemsStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            itemsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            itemsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            nameLabel.heightAnchor.constraint(equalToConstant: 24),
+            
+            imageView.centerXAnchor.constraint(equalTo: imageContainerView.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: imageContainerView.centerYAnchor),
+            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
+            imageView.leadingAnchor.constraint(greaterThanOrEqualTo: imageContainerView.leadingAnchor),
+            imageView.trailingAnchor.constraint(lessThanOrEqualTo: imageContainerView.trailingAnchor),
+            imageView.topAnchor.constraint(greaterThanOrEqualTo: imageContainerView.topAnchor),
+            imageView.bottomAnchor.constraint(lessThanOrEqualTo: imageContainerView.bottomAnchor),
         ])
     }
     

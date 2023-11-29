@@ -46,7 +46,7 @@ struct MockData {
             items.append(Item(title: "Activity \(i)"))
         }
         
-        let section = Section.people(items)
+        let section = Section.activities(items)
         return section
     }
 }

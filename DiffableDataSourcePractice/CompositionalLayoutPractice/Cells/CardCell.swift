@@ -13,7 +13,7 @@ class CardCell: BaseCollectionCell {
         let obj = UIStackView()
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.axis = .vertical
-        obj.spacing = 8
+        obj.spacing = 4
         obj.backgroundColor = .orange
         return obj
     }()
@@ -22,6 +22,8 @@ class CardCell: BaseCollectionCell {
         let obj = UIImageView()
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        obj.layer.cornerRadius = 20
+        obj.clipsToBounds = true
         return obj
     }()
     
@@ -29,9 +31,8 @@ class CardCell: BaseCollectionCell {
         let obj = UILabel()
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.backgroundColor = .brown
-        obj.textAlignment = .center
         obj.textColor = .systemBackground
-        obj.font = UIFont.boldSystemFont(ofSize: 16)
+        obj.font = UIFont.systemFont(ofSize: 12)
         obj.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
         return obj
     }()

@@ -11,8 +11,7 @@ import UIKit
 class CompositionalLayoutViewController: UIViewController {
     
     private var practiceCollectionView: UICollectionView = {
-//        let layout = CustomTestCollectionViewLayout.get()
-        let layout = UICollectionViewFlowLayout()
+        let layout = CustomTestCollectionViewLayout.get()
         let obj = UICollectionView(frame: .zero, collectionViewLayout: layout)
         obj.translatesAutoresizingMaskIntoConstraints = false
         obj.backgroundColor = .cyan
@@ -35,6 +34,7 @@ class CompositionalLayoutViewController: UIViewController {
         practiceCollectionView.register(PeopleCell.self, forCellWithReuseIdentifier: PeopleCell.identifier)
         practiceCollectionView.register(CardCell.self, forCellWithReuseIdentifier: CardCell.identifier)
         practiceCollectionView.register(ActivityCell.self, forCellWithReuseIdentifier: ActivityCell.identifier)
+        practiceCollectionView.register(CollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionHeaderView")
         
         view.addSubview(practiceCollectionView)
         
@@ -91,5 +91,16 @@ extension CompositionalLayoutViewController: UICollectionViewDelegate, UICollect
         let item = data[indexPath.section].items[indexPath.row]
         cell.setData(item: item)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "CollectionHeaderView", for: indexPath) as! CollectionHeaderView
+        header.titleLabel.text = ""
+        guard kind == UICollectionView.elementKindSectionHeader else {
+            return header
+        }
+        let title = data[indexPath.section].title
+        header.titleLabel.text = title
+        return header
     }
 }

@@ -30,6 +30,7 @@
 		3450FE5D2B171F6A00021267 /* SampleCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE5C2B171F6A00021267 /* SampleCollectionCell.swift */; };
 		3450FE602B17219C00021267 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE5F2B17219C00021267 /* BaseCollectionCell.swift */; };
 		3450FE622B17276E00021267 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE612B17276E00021267 /* RoundedImageView.swift */; };
+		3450FE642B174CF600021267 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE632B174CF600021267 /* CollectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		3450FE5C2B171F6A00021267 /* SampleCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCollectionCell.swift; sourceTree = "<group>"; };
 		3450FE5F2B17219C00021267 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		3450FE612B17276E00021267 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		3450FE632B174CF600021267 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +223,7 @@
 			children = (
 				3450FE462B16190F00021267 /* Helpers.swift */,
 				3450FE612B17276E00021267 /* RoundedImageView.swift */,
+				3450FE632B174CF600021267 /* CollectionHeaderView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 				3450FE5B2B171E5200021267 /* MockData.swift in Sources */,
 				3450FE4A2B17189500021267 /* Item.swift in Sources */,
 				3450FE4E2B171AE100021267 /* Section.swift in Sources */,
+				3450FE642B174CF600021267 /* CollectionHeaderView.swift in Sources */,
 				3450FE622B17276E00021267 /* RoundedImageView.swift in Sources */,
 				3450FE592B171C5C00021267 /* ActivityCell.swift in Sources */,
 				3450FE602B17219C00021267 /* BaseCollectionCell.swift in Sources */,

@@ -29,4 +29,17 @@ enum Section {
             "Activities"
         }
     }
+    
+    static func section(atIndex index: Int) -> Section? {
+        switch index {
+        case 0:
+            return .people([])
+        case 1:
+            return .cards([])
+        case 2:
+            return .activities([])
+        default:
+            return nil
+        }
+    }
 }

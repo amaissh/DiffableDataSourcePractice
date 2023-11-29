@@ -21,7 +21,9 @@ class ActivityCell: BaseCollectionCell {
     private var imageView: UIImageView = {
         let obj = UIImageView()
         obj.translatesAutoresizingMaskIntoConstraints = false
-        obj.setContentCompressionResistancePriority(.defaultLow, for: .vertical)
+        obj.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
+        obj.clipsToBounds = true
+        obj.layer.cornerRadius = 8
         return obj
     }()
     
@@ -31,8 +33,8 @@ class ActivityCell: BaseCollectionCell {
         obj.backgroundColor = .brown
         obj.textAlignment = .center
         obj.textColor = .systemBackground
-        obj.font = UIFont.boldSystemFont(ofSize: 16)
-        obj.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
+        obj.font = UIFont.systemFont(ofSize: 12)
+        obj.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         return obj
     }()
     
@@ -55,7 +57,9 @@ class ActivityCell: BaseCollectionCell {
             itemsStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             itemsStackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             itemsStackView.topAnchor.constraint(equalTo: contentView.topAnchor),
-            itemsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+            itemsStackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
+            
+            imageView.widthAnchor.constraint(equalToConstant: 44)
         ])
     }
     
