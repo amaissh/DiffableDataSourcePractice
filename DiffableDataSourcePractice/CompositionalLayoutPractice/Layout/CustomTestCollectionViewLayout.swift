@@ -1,21 +1,14 @@
 //
-//  CompositionalLayoutViewController.swift
+//  CustomTestCollectionViewLayout.swift
 //  DiffableDataSourcePractice
 //
-//  Created by Amais Sheikh on 28/11/2023.
+//  Created by Amais Sheikh on 29/11/2023.
 //
 
-import Foundation
 import UIKit
 
 class CustomTestCollectionViewLayout {
     static func get() -> UICollectionViewCompositionalLayout {
-        
-        //item
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                              heightDimension: .fractionalHeight(1))
-        
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
         //group
         let firstGroup = getFirstGroup()
@@ -24,7 +17,7 @@ class CustomTestCollectionViewLayout {
         let fourthGroup = getFourthGroup()
         
         let finalGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1),
-                                               heightDimension: .fractionalHeight(2))
+                                                    heightDimension: .fractionalHeight(1.5))
         
         let finalGroup = NSCollectionLayoutGroup.vertical(layoutSize: finalGroupSize, subitems: [
             firstGroup,
@@ -68,7 +61,7 @@ class CustomTestCollectionViewLayout {
     }
     
     static private func getThirdGroup() -> NSCollectionLayoutGroup {
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3), heightDimension: .fractionalHeight(1))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.3333), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 8)
         let thirdGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.15))
@@ -82,58 +75,10 @@ class CustomTestCollectionViewLayout {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = .init(top: 0, leading: 8, bottom: 0, trailing: 8)
         
-        let fourthGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.3))
+        let fourthGroupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(0.4))
         let fourthGroup = NSCollectionLayoutGroup.horizontal(layoutSize: fourthGroupSize, subitems: [item])
         fourthGroup.contentInsets = .init(top: 8, leading: 0, bottom: 8, trailing: 0)
         
         return fourthGroup
-    }
-}
-
-
-class CompositionalLayoutViewController: UIViewController {
-    
-    private var practiceCollectionView: UICollectionView = {
-        let layout = CustomTestCollectionViewLayout.get()
-        let obj = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        obj.translatesAutoresizingMaskIntoConstraints = false
-        obj.backgroundColor = .cyan
-        return obj
-    }()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configure()
-    }
-    
-    private func configure() {
-        
-        view.backgroundColor = .lightGray
-        
-        practiceCollectionView.delegate = self
-        practiceCollectionView.dataSource = self
-        practiceCollectionView.register(SampleCollectionCell.self, forCellWithReuseIdentifier: "cell")
-        
-        view.addSubview(practiceCollectionView)
-        
-        NSLayoutConstraint.activate([
-            practiceCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
-            practiceCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            practiceCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
-            practiceCollectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40)
-        ])
-    }
-}
-
-extension CompositionalLayoutViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SampleCollectionCell
-        cell.backgroundColor = .orange
-        cell.imageView.image = UIImage(named: "hands")
-        return cell
     }
 }

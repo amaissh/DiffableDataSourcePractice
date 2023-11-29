@@ -1,8 +1,8 @@
 //
-//  Helpers.swift
+//  SampleCollectionCell.swift
 //  DiffableDataSourcePractice
 //
-//  Created by Amais Sheikh on 28/11/2023.
+//  Created by Amais Sheikh on 29/11/2023.
 //
 
 import UIKit
