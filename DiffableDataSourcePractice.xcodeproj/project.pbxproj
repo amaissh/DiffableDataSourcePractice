@@ -31,6 +31,7 @@
 		3450FE602B17219C00021267 /* BaseCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE5F2B17219C00021267 /* BaseCollectionCell.swift */; };
 		3450FE622B17276E00021267 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE612B17276E00021267 /* RoundedImageView.swift */; };
 		3450FE642B174CF600021267 /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE632B174CF600021267 /* CollectionHeaderView.swift */; };
+		3450FE662B176E4D00021267 /* TableSectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3450FE652B176E4D00021267 /* TableSectionData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		3450FE5F2B17219C00021267 /* BaseCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionCell.swift; sourceTree = "<group>"; };
 		3450FE612B17276E00021267 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		3450FE632B174CF600021267 /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionHeaderView.swift; sourceTree = "<group>"; };
+		3450FE652B176E4D00021267 /* TableSectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSectionData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 				3450FE492B17189500021267 /* Item.swift */,
 				3450FE4D2B171AE100021267 /* Section.swift */,
 				3450FE5A2B171E5200021267 /* MockData.swift */,
+				3450FE652B176E4D00021267 /* TableSectionData.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				3450FE182B14C32900021267 /* DiffableDataSourcePractice.xcdatamodeld in Sources */,
 				3450FE552B171C4E00021267 /* PeopleCell.swift in Sources */,
 				3450FE102B14C32900021267 /* SceneDelegate.swift in Sources */,
+				3450FE662B176E4D00021267 /* TableSectionData.swift in Sources */,
 				3450FE572B171C5500021267 /* CardCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

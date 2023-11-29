@@ -8,16 +8,16 @@
 import Foundation
 
 enum Section {
-    case people([Item])
-    case cards([Item])
-    case activities([Item])
+    case people
+    case cards
+    case activities
     
-    var items: [Item] {
-        switch self {
-        case .people(let array), .cards(let array), .activities(let array):
-            return array
-        }
-    }
+//    var items: [Item] {
+//        switch self {
+//        case .people(let array), .cards(let array), .activities(let array):
+//            return array
+//        }
+//    }
     
     var title: String {
         switch self {
@@ -33,11 +33,11 @@ enum Section {
     static func section(atIndex index: Int) -> Section? {
         switch index {
         case 0:
-            return .people([])
+            return .people
         case 1:
-            return .cards([])
+            return .cards
         case 2:
-            return .activities([])
+            return .activities
         default:
             return nil
         }

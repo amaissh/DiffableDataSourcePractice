@@ -18,7 +18,7 @@ class CompositionalLayoutViewController: UIViewController {
         return obj
     }()
     
-    private var data = MockData.get()
+    private var data = MockData.get() //UICollectionViewDiffableDataSource<Check, Item>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +58,7 @@ extension CompositionalLayoutViewController: UICollectionViewDelegate, UICollect
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let section = data[indexPath.section]
+        let section = data[indexPath.section].sectionInfo
         switch section {
         case .people:
             return getPeopleCell(collectionView, cellForItemAt: indexPath)
@@ -99,7 +99,7 @@ extension CompositionalLayoutViewController: UICollectionViewDelegate, UICollect
         guard kind == UICollectionView.elementKindSectionHeader else {
             return header
         }
-        let title = data[indexPath.section].title
+        let title = data[indexPath.section].sectionInfo.title
         header.titleLabel.text = title
         return header
     }
