@@ -7,7 +7,8 @@
 
 import UIKit
 
-struct Item {
+struct Item: Hashable {
+    let id = UUID()
     var image: UIImage
     var title: String
     

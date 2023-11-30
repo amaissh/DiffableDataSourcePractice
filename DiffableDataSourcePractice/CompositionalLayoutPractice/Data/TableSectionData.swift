@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TableSectionData {
+struct TableSectionData: Hashable {
     var sectionInfo: Section
     var items: [Item]
 }

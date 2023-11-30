@@ -12,13 +12,6 @@ enum Section {
     case cards
     case activities
     
-//    var items: [Item] {
-//        switch self {
-//        case .people(let array), .cards(let array), .activities(let array):
-//            return array
-//        }
-//    }
-    
     var title: String {
         switch self {
         case .people:
